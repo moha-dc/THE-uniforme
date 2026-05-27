@@ -21,6 +21,9 @@
 <meta name="twitter:title"       content="The Uniform — Épisode 01 · Les pilotes" />
 <meta name="twitter:description" content="Un siècle au-dessus des nuages, en galons et en laiton. Première transmission de The Uniform." />
 
+<!-- LCP — précharge du logo (image au-dessus du fold) -->
+<link rel="preload" as="image" href="logo.webp" fetchpriority="high">
+
 <!-- Fonts — chargement non-bloquant -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +62,7 @@
   <div class="max-w-site mx-auto px-[clamp(20px,4vw,64px)]">
     <div class="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-[clamp(24px,4vw,64px)] items-end">
 
-      <div class="reveal-stagger">
+      <div>
         <div class="font-sans uppercase tracking-[0.12em] font-medium text-[0.72rem] text-rust mb-[18px]">— Une chaîne YouTube · Premier vol</div>
 
         <h1 class="font-display font-light leading-[0.88] tracking-[-0.035em] text-[clamp(4rem,13vw,11rem)] mb-6">
@@ -84,7 +87,7 @@
       </div>
 
       <!-- ===== MANIFEST CARD ===== -->
-      <aside class="manifest-card border border-ink bg-white/[0.18] p-7 relative reveal">
+      <aside class="manifest-card border border-ink bg-white/[0.18] p-7 relative">
         <div class="flex justify-center mb-[18px] text-gold">
           <svg class="w-24 h-auto" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.4">
             <path d="M100 30 C 80 22, 50 18, 10 30 C 50 28, 70 30, 100 34 Z" fill="currentColor" stroke="none" opacity="0.92"/>
