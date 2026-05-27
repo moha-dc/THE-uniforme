@@ -317,6 +317,53 @@
   </div>
 </section>
 
+<!-- ========================= LOCALISATION ========================= -->
+<section class="py-[clamp(60px,9vw,130px)] bg-bone">
+  <div class="max-w-site mx-auto px-[clamp(20px,4vw,64px)]">
+    <header class="flex items-baseline gap-6 border-t border-ink pt-7 mb-12 reveal">
+      <span class="font-sans text-[0.75rem] tracking-[0.2em] text-rust uppercase [text-shadow:0_0_18px_rgba(204,59,40,0.25)]">§ 06 — Localisation</span>
+      <h2 class="font-display font-light text-[clamp(1.6rem,3.4vw,2.6rem)] leading-none tracking-[-0.01em]">Nous retrouver à Paris</h2>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2.4fr] gap-[clamp(24px,4vw,60px)] items-start reveal">
+
+      <!-- Infos adresse -->
+      <div class="font-sans">
+        <p class="text-[0.68rem] tracking-[0.22em] text-rust uppercase mb-4">Digital Campus Paris</p>
+        <address class="not-italic text-ink-2 text-[0.97rem] leading-[1.7] mb-7 border-l-2 border-gold pl-4">
+          10 Rue de la Paix<br>
+          75002 Paris<br>
+          France
+        </address>
+        <dl class="grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-[0.78rem]">
+          <dt class="text-mist tracking-[0.12em] uppercase text-[0.66rem] pt-[2px]">Métro</dt>
+          <dd class="text-ink font-medium">Opéra · lignes 3, 7, 8</dd>
+          <dt class="text-mist tracking-[0.12em] uppercase text-[0.66rem] pt-[2px]">RER</dt>
+          <dd class="text-ink font-medium">Auber · RER A</dd>
+        </dl>
+        <a href="https://maps.google.com/?q=Digital+Campus+Paris,+10+Rue+de+la+Paix,+75002+Paris"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 mt-7 font-sans text-[0.7rem] uppercase tracking-[0.18em] text-ink border-b border-ink pb-[2px] hover:text-gold hover:border-gold transition-colors duration-200">
+          <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Ouvrir dans Maps
+        </a>
+      </div>
+
+      <!-- Carte -->
+      <div class="border border-ink overflow-hidden aspect-[16/9] lg:aspect-[16/7]">
+        <iframe
+          src="https://maps.google.com/maps?q=Digital+Campus+Paris,+10+Rue+de+la+Paix,+75002+Paris&output=embed&z=16&hl=fr"
+          title="Localisation Digital Campus Paris"
+          class="w-full h-full border-0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ========================= FOOTER ========================= -->
