@@ -1,0 +1,25 @@
+{
+  "name": "youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i src/input.css -o style.css",
+    "dev": "tailwindcss -i src/input.css -o style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moha-dc/THE-uniforme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/moha-dc/THE-uniforme/issues"
+  },
+  "homepage": "https://github.com/moha-dc/THE-uniforme#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
