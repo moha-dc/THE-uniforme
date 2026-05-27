@@ -6,10 +6,20 @@
 <title>The Uniforme — Épisode 01 · Les pilotes</title>
 <meta name="description" content="The Uniform : une chaîne YouTube qui retrace l'évolution des tenues dans les grands métiers. Épisode 01 — un siècle d'uniformes de pilotes." />
 
-<!-- Social preview -->
-<meta property="og:title" content="The Uniform — Épisode 01 · Les pilotes" />
+<!-- SEO -->
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#1a2d6e" />
+
+<!-- Open Graph -->
+<meta property="og:title"       content="The Uniform — Épisode 01 · Les pilotes" />
 <meta property="og:description" content="Un siècle au-dessus des nuages, en galons et en laiton. Première transmission de The Uniform." />
-<meta property="og:type" content="website" />
+<meta property="og:type"        content="website" />
+<meta property="og:locale"      content="fr_FR" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:title"       content="The Uniform — Épisode 01 · Les pilotes" />
+<meta name="twitter:description" content="Un siècle au-dessus des nuages, en galons et en laiton. Première transmission de The Uniform." />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +35,7 @@
 <header class="sticky top-0 z-50 bg-ink text-bone border-b border-gold">
   <div class="max-w-site mx-auto pr-[clamp(20px,4vw,64px)] flex items-center justify-between gap-6 font-sans text-[0.7rem] uppercase tracking-[0.18em]">
     <a href="#" class="text-gold-2 font-bold tracking-[0.18em] uppercase flex items-center gap-2.5 [text-shadow:0_0_14px_rgba(240,196,24,0.6)]">
-      <img src="logo.webp" alt="" class="h-16 w-auto block shrink-0 object-contain" />
+      <img src="logo.webp" alt="" class="h-16 w-auto block shrink-0 object-contain" fetchpriority="high" decoding="async" />
       <span class="sr-only">The Uniforme — accueil</span>
     </a>
     <div class="hidden md:flex gap-7 opacity-[0.85]">
@@ -38,6 +48,7 @@
   </div>
 </header>
 
+<main>
 <!-- ========================= HERO ========================= -->
 <section class="py-[clamp(40px,7vw,96px)] pb-[clamp(60px,8vw,120px)] relative">
   <div class="max-w-site mx-auto px-[clamp(20px,4vw,64px)]">
@@ -145,6 +156,7 @@
             src="https://www.youtube.com/embed/VOTRE_ID_VIDEO?rel=0"
             title="The Uniform — Épisode 01 · Les pilotes"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="lazy"
             allowfullscreen></iframe>
         </div>
         <div class="mt-3.5 flex justify-between font-sans text-[0.7rem] text-mist tracking-[0.18em] uppercase">
@@ -289,21 +301,23 @@
     <h2 class="font-display font-light text-[clamp(2.4rem,6.5vw,5rem)] leading-[0.95] tracking-[-0.025em] max-w-[18ch] mx-auto mb-8 reveal">Un uniforme, <em class="text-gold">une histoire</em>.</h2>
     <p class="max-w-[48ch] mx-auto mb-10 text-mist text-[1.05rem] reveal">Un nouvel épisode chaque mois. Une silhouette, une époque, une histoire — et toutes les coulisses d'un uniforme que vous croyiez connaître.</p>
 
-    <a class="inline-flex items-center gap-3 px-[22px] py-[14px] font-sans text-[0.72rem] uppercase tracking-[0.18em] border border-gold bg-gold text-ink transition-all duration-[250ms] hover:bg-bone hover:border-bone reveal" href="https://www.youtube.com/@theuniform" target="_blank" rel="noopener">
+    <a class="inline-flex items-center gap-3 px-[22px] py-[14px] font-sans text-[0.72rem] uppercase tracking-[0.18em] border border-gold bg-gold text-ink transition-all duration-[250ms] hover:bg-bone hover:border-bone reveal" href="https://www.youtube.com/@theuniform" target="_blank" rel="noopener noreferrer">
       <svg class="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       S'abonner sur YouTube
     </a>
   </div>
 </section>
 
+</main>
+
 <!-- ========================= FOOTER ========================= -->
 <footer class="bg-ink text-mist border-t border-accent/30 py-10 px-[clamp(20px,4vw,64px)]">
   <div class="max-w-site mx-auto flex justify-between items-center gap-5 font-sans text-[0.7rem] tracking-[0.18em] uppercase flex-wrap">
     <div>© 2026 · The Uniforme · Tous droits réservés</div>
     <div class="flex gap-7 flex-wrap">
-      <a class="hover:text-gold transition-colors duration-200" href="https://www.youtube.com/@theuniform" target="_blank" rel="noopener">YouTube</a>
-      <a class="hover:text-gold transition-colors duration-200" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      <a class="hover:text-gold transition-colors duration-200" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+      <a class="hover:text-gold transition-colors duration-200" href="https://www.youtube.com/@theuniform" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="hover:text-gold transition-colors duration-200" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a class="hover:text-gold transition-colors duration-200" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
       <a class="hover:text-gold transition-colors duration-200" href="mailto:hello@theuniform.tv">Contact</a>
     </div>
     <div>Mission 04 · Landing page</div>
