@@ -3,12 +3,6 @@
   "outputDirectory": ".",
   "headers": [
     {
-      "source": "/style.css",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
-      ]
-    },
-    {
       "source": "/logo.webp",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=604800" }
