@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i src/input.css -o style.css --minify",
+    "build": "tailwindcss -i src/input.css -o style.css --minify && node scripts/build.js",
     "dev": "tailwindcss -i src/input.css -o style.css --watch"
   },
   "repository": {
