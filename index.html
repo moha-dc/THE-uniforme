@@ -50,38 +50,31 @@
     <a href="#abonner" class="text-gold pr-[clamp(20px,4vw,64px)] relative z-10">S'abonner ↗</a>
   </div>
 
-  <!-- Costume animé -->
-  <div class="suit-enter absolute top-1/2 -translate-y-[52%] right-[clamp(80px,14vw,220px)] pointer-events-none select-none hidden sm:block" aria-hidden="true">
-    <svg class="suit-float w-[clamp(48px,5vw,68px)] h-auto" viewBox="0 0 50 62" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-      <!-- Corps de la veste -->
-      <path d="M2 14 L2 60 L48 60 L48 14 L36 8 L25 28 L14 8 Z" stroke="#d4a400" stroke-width="1.4"/>
-      <!-- Revers gauche -->
-      <path d="M14 8 L5 24 L18 38 L25 28" stroke="#d4a400" stroke-width="1.4"/>
-      <!-- Revers droit -->
-      <path d="M36 8 L45 24 L32 38 L25 28" stroke="#d4a400" stroke-width="1.4"/>
-      <!-- Épaulette gauche -->
-      <rect x="1" y="7" width="14" height="8" rx="2" stroke="#d4a400" stroke-width="1.2"/>
-      <!-- Épaulette droite -->
-      <rect x="35" y="7" width="14" height="8" rx="2" stroke="#d4a400" stroke-width="1.2"/>
-      <!-- Galons gauche -->
-      <line x1="3.5" y1="9.5" x2="13" y2="9.5" stroke="#f0c418" stroke-width="1.8"/>
-      <line x1="3.5" y1="12.2" x2="13" y2="12.2" stroke="#f0c418" stroke-width="1.8"/>
-      <!-- Galons droit -->
-      <line x1="37" y1="9.5" x2="46.5" y2="9.5" stroke="#f0c418" stroke-width="1.8"/>
-      <line x1="37" y1="12.2" x2="46.5" y2="12.2" stroke="#f0c418" stroke-width="1.8"/>
-      <!-- Boutons -->
-      <circle cx="25" cy="43" r="1.8" fill="#d4a400"/>
-      <circle cx="25" cy="50" r="1.8" fill="#d4a400"/>
-      <circle cx="25" cy="57" r="1.8" fill="#d4a400"/>
-      <!-- Badge ailes pilote -->
-      <path d="M5 33 C7 28 13 27 16 33" stroke="#f0c418" stroke-width="1.1" fill="none"/>
-      <path d="M16 33 C18 30 21 30 21 33" stroke="#f0c418" stroke-width="1.1" fill="none"/>
-      <circle cx="10" cy="33" r="2" stroke="#f0c418" stroke-width="1" fill="none"/>
-      <!-- Poche poitrine -->
-      <rect x="4" y="37" width="10" height="6" rx="0.5" stroke="#d4a400" stroke-width="0.8"/>
-      <!-- Cravate -->
-      <path d="M22.5 9 L25 24 L27.5 9" stroke="#d4a400" stroke-width="1.1"/>
-    </svg>
+  <!-- Costume animé — niveau 1 : fade au scroll -->
+  <div id="suit-wrap" class="hidden sm:block absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+    <!-- Niveau 2 : slide-in centré -->
+    <div class="suit-enter absolute left-1/2 top-1/2">
+      <!-- Niveau 3 : flottement -->
+      <svg class="suit-float w-[clamp(48px,5vw,68px)] h-auto" viewBox="0 0 50 62" fill="none" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 14 L2 60 L48 60 L48 14 L36 8 L25 28 L14 8 Z" stroke="#d4a400" stroke-width="1.4"/>
+        <path d="M14 8 L5 24 L18 38 L25 28" stroke="#d4a400" stroke-width="1.4"/>
+        <path d="M36 8 L45 24 L32 38 L25 28" stroke="#d4a400" stroke-width="1.4"/>
+        <rect x="1" y="7" width="14" height="8" rx="2" stroke="#d4a400" stroke-width="1.2"/>
+        <rect x="35" y="7" width="14" height="8" rx="2" stroke="#d4a400" stroke-width="1.2"/>
+        <line x1="3.5" y1="9.5" x2="13" y2="9.5" stroke="#f0c418" stroke-width="1.8"/>
+        <line x1="3.5" y1="12.2" x2="13" y2="12.2" stroke="#f0c418" stroke-width="1.8"/>
+        <line x1="37" y1="9.5" x2="46.5" y2="9.5" stroke="#f0c418" stroke-width="1.8"/>
+        <line x1="37" y1="12.2" x2="46.5" y2="12.2" stroke="#f0c418" stroke-width="1.8"/>
+        <circle cx="25" cy="43" r="1.8" fill="#d4a400"/>
+        <circle cx="25" cy="50" r="1.8" fill="#d4a400"/>
+        <circle cx="25" cy="57" r="1.8" fill="#d4a400"/>
+        <path d="M5 33 C7 28 13 27 16 33" stroke="#f0c418" stroke-width="1.1" fill="none"/>
+        <path d="M16 33 C18 30 21 30 21 33" stroke="#f0c418" stroke-width="1.1" fill="none"/>
+        <circle cx="10" cy="33" r="2" stroke="#f0c418" stroke-width="1" fill="none"/>
+        <rect x="4" y="37" width="10" height="6" rx="0.5" stroke="#d4a400" stroke-width="0.8"/>
+        <path d="M22.5 9 L25 24 L27.5 9" stroke="#d4a400" stroke-width="1.1"/>
+      </svg>
+    </div>
   </div>
 </header>
 
@@ -438,6 +431,17 @@ La mode est partout, même là où on <em class="text-gold">s'y attend le moins.
 
 <!-- ========================= SCROLL REVEAL ========================= -->
 <script src="js/reveal.js" defer></script>
+
+<!-- Costume : disparaît dès le premier scroll -->
+<script>
+(function(){
+  var w=document.getElementById('suit-wrap');
+  if(!w)return;
+  window.addEventListener('scroll',function(){
+    w.style.opacity=window.scrollY>10?'0':'1';
+  },{passive:true});
+})();
+</script>
 
 </body>
 </html>
